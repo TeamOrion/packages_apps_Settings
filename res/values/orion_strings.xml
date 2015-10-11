@@ -59,4 +59,8 @@
   <!-- Configure notifications > low battery pulse option -->
     <string name="low_battery_pulse_title">Low battery</string>
     <string name="low_battery_pulse_summary">Pulse when battery is low</string>
+
+  <!-- Advanced reboot options -->
+    <string name="advanced_reboot_title">Advanced reboot</string>
+    <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery, bootloader or performing a soft reboot</string>
 </resources>
