@@ -386,4 +386,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_title">Disable ongoing on lockscreen</string>
   <string name="app_notification_no_ongoing_on_keyguard_summary">Never show ongoing notifications from this app on the lockscreen</string>
 
+
+  <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
 </resources>

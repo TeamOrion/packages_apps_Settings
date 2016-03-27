@@ -415,4 +415,11 @@
     <!-- Settings main menu entry -->
     <string name="gesture_settings_title">Gestures</string>
 
+    <!-- Slider Settings -->
+    <string name="slider_settings_title">Notification Slider</string>
+
+    <!-- Swap recents and back buttons -->
+    <string name="keys_bindings_title">Key actions</string>
+    <string name="hardware_keys_app_switch_swap_button_title">Swap hw buttons</string>
+    <string name="hardware_keys_app_switch_swap_button_summary">Swap the order of recents and back buttons</string>
 </resources>
