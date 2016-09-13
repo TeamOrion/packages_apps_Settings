@@ -31,6 +31,7 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE;
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
+import static android.provider.Settings.System.PROXIMITY_ON_WAKE;
 
 import android.app.Activity;
 import android.app.ActivityManagerNative;
@@ -85,6 +86,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_CAMERA_GESTURE = "camera_gesture";
     private static final String KEY_CAMERA_DOUBLE_TAP_POWER_GESTURE
             = "camera_double_tap_power_gesture";
+    private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
 
     private static final String DASHBOARD_COLUMNS = "dashboard_columns";
     private static final String DASHBOARD_SWITCHES = "dashboard_switches";
@@ -113,6 +115,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mCameraDoubleTapPowerGesturePreference;
     private ListPreference mDashboardColumns;
     private ListPreference mDashboardSwitches;
+    private SwitchPreference mProximityCheckOnWakePreference;
 
 
     private ContentObserver mAccelerometerRotationObserver =
@@ -221,6 +224,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         final int currentNightMode = uiManager.getNightMode();
         mNightModePreference.setValue(String.valueOf(currentNightMode));
         mNightModePreference.setOnPreferenceChangeListener(this);
+        
+        if (isProximityCheckOnWakeAvailable(getResources())) {
+            mProximityCheckOnWakePreference = (SwitchPreference) findPreference(KEY_PROXIMITY_WAKE);
+            mProximityCheckOnWakePreference.setOnPreferenceChangeListener(this);
+            } else {
+			removePreference(KEY_PROXIMITY_WAKE);
+		}
     }
 
     private static boolean allowAllRotations(Context context) {
@@ -260,6 +270,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static boolean isCameraDoubleTapPowerGestureAvailable(Resources res) {
         return res.getBoolean(
                 com.android.internal.R.bool.config_cameraDoubleTapPowerGestureEnabled);
+    }
+    
+    private static boolean isProximityCheckOnWakeAvailable(Resources res) {
+                return res.getBoolean(com.android.internal.R.bool.config_proximityCheckOnWake);
     }
 
     private void updateTimeoutPreferenceDescription(long currentTimeout) {
@@ -445,6 +459,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     getContentResolver(), CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED, 0);
             mCameraDoubleTapPowerGesturePreference.setChecked(value == 0);
         }
+        
+        // Update Proximity Check on wake if it is available.
+        if (mProximityCheckOnWakePreference != null) {
+            int value = Settings.System.getInt(getContentResolver(), PROXIMITY_ON_WAKE, 0);
+            mProximityCheckOnWakePreference.setChecked(value != 0);
+        }
     }
 
     private void updateScreenSaverSummary() {
@@ -546,6 +566,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "could not persist night mode setting", e);
             }
         }
+        
+        if (preference == mProximityCheckOnWakePreference) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(), PROXIMITY_ON_WAKE, value ? 1 : 0);
+        }
         return true;
     }
 
@@ -609,6 +634,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     }
                     if (!isCameraDoubleTapPowerGestureAvailable(context.getResources())) {
                         result.add(KEY_CAMERA_DOUBLE_TAP_POWER_GESTURE);
+                    }
+                    if (!isProximityCheckOnWakeAvailable(context.getResources())) {
+                        result.add(KEY_PROXIMITY_WAKE);
                     }
                     return result;
                 }
