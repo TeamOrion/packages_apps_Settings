@@ -116,4 +116,10 @@
      <string name="tuner_navbar_title">Navigation buttons</string>
      <string name="tuner_navbar_summary">Customize your buttons</string>
      <string name="tuner_other_title">Other</string>
+
+     <!-- Quick pull down-->
+     <string name="quick_pulldown_title">Quick pulldown</string>
+     <string name="quick_pulldown_off">Off</string>
+     <string name="quick_pulldown_left">Left</string>
+     <string name="quick_pulldown_right">Right</string>
 </resources>
