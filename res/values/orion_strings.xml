@@ -138,4 +138,8 @@
      <!-- Volume rocker wake -->
      <string name="volume_rocker_wake_title">Volume rocker wake</string>
      <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
+
+     <!-- One handed mode -->
+     <string name="one_handed_mode_title">One handed mode</string>
+     <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
 </resources>
