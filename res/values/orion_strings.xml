@@ -159,4 +159,7 @@
      <!-- CAF Version -->
      <string name="version_title">CAF Version</string>
      <string name="version_default">Unknown</string>
+   
+     <!-- Heads-up notifications -->
+     <string name="heads_up_notifications_title">Peeking notifications</string>
 </resources>
