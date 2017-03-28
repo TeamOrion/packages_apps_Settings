@@ -65,6 +65,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
+    private static final String KEY_CAF_VERSION = "caf_version";
     private static final String KEY_SECURITY_PATCH = "security_patch";
     private static final String KEY_ORION_VERSION = "orion_version";
     private static final String KEY_ORION_BUILD_DATE = "build_date";
@@ -107,6 +108,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         findPreference(KEY_FIRMWARE_VERSION).setEnabled(true);
         setValueSummary(KEY_ORION_VERSION, "ro.orion.version");
         setValueSummary(KEY_ORION_BUILD_DATE, "ro.build.date");
+
+        setValueSummary(KEY_CAF_VERSION, "ro.caf.version");
 
         final String patch = DeviceInfoUtils.getSecurityPatch();
         if (!TextUtils.isEmpty(patch)) {
