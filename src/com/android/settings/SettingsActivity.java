@@ -266,7 +266,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.ButtonsSettingsActivity.class.getName(),
             Settings.HomeSettingsActivity.class.getName(),
             Settings.SoundSettingsActivity.class.getName(),
-            Settings.UISettingsActivity.class.getName(),
             Settings.DisplaySettingsActivity.class.getName(),
             Settings.StorageSettingsActivity.class.getName(),
             Settings.ManageApplicationsActivity.class.getName(),
@@ -352,7 +351,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             PhysicalKeyboardFragment.class.getName(),
             ZenModeSettings.class.getName(),
             SoundSettings.class.getName(),
-            UISettings.class.getName(),
             ConfigureNotificationSettings.class.getName(),
             ChooseLockPassword.ChooseLockPasswordFragment.class.getName(),
             ChooseLockPattern.ChooseLockPatternFragment.class.getName(),
@@ -385,6 +383,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             TestingSettings.class.getName(),
             WifiAPITest.class.getName(),
             WifiInfo.class.getName(),
+            UISettings.class.getName(),
             MasterClear.class.getName(),
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
@@ -595,6 +594,7 @@ public class SettingsActivity extends SettingsDrawerActivity
 
         mIsShowingDashboard = className.equals(Settings.class.getName())
                 || className.equals(Settings.WirelessSettings.class.getName())
+                || className.equals(Settings.UISettings.class.getName())
                 || className.equals(Settings.DeviceSettings.class.getName())
                 || className.equals(Settings.PersonalSettings.class.getName())
                 || className.equals(Settings.WirelessSettings.class.getName());

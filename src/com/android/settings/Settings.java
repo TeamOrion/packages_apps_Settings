@@ -121,7 +121,6 @@ public class Settings extends SettingsActivity {
     public static class ZenModeExternalRuleSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ZenModeVisualInterruptionSettingsActivity extends SettingsActivity { /* empty */}
     public static class SoundSettingsActivity extends SettingsActivity { /* empty */ }
-    public static class UISettingsActivity extends SettingsActivity { /* empty */ }
     public static class ConfigureNotificationSettingsActivity extends SettingsActivity { /* empty */ }
     public static class NotificationAppListActivity extends SettingsActivity { /* empty */ }
     public static class AppNotificationSettingsActivity extends SettingsActivity { /* empty */ }
@@ -161,10 +160,12 @@ public class Settings extends SettingsActivity {
     public static class TestingSettingsActivity extends SettingsActivity { /* empty */ }
     public static class WifiAPITestActivity extends SettingsActivity { /* empty */ }
     public static class WifiInfoActivity extends SettingsActivity { /* empty */ }
+    public static class UISettingsActivity extends SettingsActivity { /* empty */ }
     public static class SMQQtiFeedbackActivity extends SettingsActivity { /* empty */ }
 
     // Categories.
     public static class WirelessSettings extends SettingsActivity { /* empty */ }
+    public static class UISettings extends SettingsActivity { /* empty */ }
     public static class DeviceSettings extends SettingsActivity { /* empty */ }
     public static class PersonalSettings extends SettingsActivity { /* empty */ }
     public static class SystemSettings extends SettingsActivity { /* empty */ }
