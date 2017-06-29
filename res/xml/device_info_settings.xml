@@ -20,7 +20,8 @@
       
         <!-- OrionOS logo header -->
         <PreferenceScreen android:key="orion_logo"
-                android:layout="@layout/about_logo_row" />         
+                           android:enabled="false"
+                           android:layout="@layout/orion_logo_row" />
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
