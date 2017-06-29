@@ -123,8 +123,8 @@
      <string name="quick_pulldown_right">Right</string>
 
      <!-- About phone screen, Orion version -->
-     <string name="tipsy_version_title">Orion version</string>
-     <string name="tipsy_version_default">Unknown</string>
+     <string name="orion_version_title">Orion version</string>
+     <string name="orion_version_default">Unknown</string>
      <!-- About phone screen, build date of ROM -->
      <string name="build_date">Build date</string>
      <string name="build_date_default">Unknown</string>
