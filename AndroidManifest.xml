@@ -2647,6 +2647,8 @@
                  android:value="com.android.settings.category.orion" />
              <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                  android:value="com.android.settings.orion.UISettings" />
+             <meta-data android:name="com.android.settings.summary"
+                 android:resource="@string/ui_pref_summary" /
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->

@@ -63,6 +63,7 @@
   <!-- UI dashboard category -->
     <string name="ui_settings_title">Universe</string>
     <string name="keywords_orion_ui">systemui statusbar navigationbar</string>
+    <string name="ui_pref_summary">Customize your device</string>
 
      <!-- Battery options -->
      <string name="battery_section_header">Battery</string>
