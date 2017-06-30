@@ -128,4 +128,8 @@
      <!-- About phone screen, build date of ROM -->
      <string name="build_date">Build date</string>
      <string name="build_date_default">Unknown</string>
+
+     <!-- Double tap-to-sleep -->
+     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+     <string name="double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
 </resources>
