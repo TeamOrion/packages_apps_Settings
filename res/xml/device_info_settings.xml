@@ -17,11 +17,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res-auto"
         android:title="@string/about_settings">
-      
-        <!-- OrionOS logo header -->
-        <PreferenceScreen android:key="orion_logo"
-                           android:enabled="false"
-                           android:layout="@layout/orion_logo_row" />
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
